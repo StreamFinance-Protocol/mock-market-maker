@@ -53,13 +53,12 @@ class BidAskSpreadMarketMaker {
     this.client = null;
     this.socketClient = null;
     this.priceAdjustments = {}; // New property to store price adjustments per market
-    this.markets = options.markets || ["AAPL-BTC", "NVDA-BTC", "TSLA-BTC"]
+    this.markets = options.markets || ["BTC-USD", "ETH-USD"]
     this.adjustmentFactor = 0.0001; // Adjust this value to control the magnitude of price changes
     this.maxOrdersPerCycle = options.maxOrdersPerCycle || 8; // New option to limit orders per cycle
     this.marketConfigs = options.marketConfigs || {
-      "AAPL-BTC": { spreads: DEFAULT_SPREADS, sizeFactors: DEFAULT_SIZE_FACTORS },
-      "NVDA-BTC": { spreads: DEFAULT_SPREADS, sizeFactors: DEFAULT_SIZE_FACTORS },
-      "TSLA-BTC": { spreads: DEFAULT_SPREADS, sizeFactors: DEFAULT_SIZE_FACTORS }
+      "BTC-USD": { spreads: DEFAULT_SPREADS, sizeFactors: DEFAULT_SIZE_FACTORS },
+      "ETH-USD": { spreads: DEFAULT_SPREADS, sizeFactors: DEFAULT_SIZE_FACTORS },
     };
 
   }
@@ -244,11 +243,10 @@ async function createAndRunMarketMakers(priceFetcher) {
     mnemonic: config.mnemonic,
     baseOrderSize: DEFAULT_BASE_ORDER_SIZE,
     maxOrdersPerCycle: 8,
-    markets: ["AAPL-BTC", "NVDA-BTC", "TSLA-BTC"],
+    markets: ["BTC-USD", "ETH-USD"],
     marketConfig: {
-      "AAPL-BTC": { spreads: DEFAULT_SPREADS, sizeFactors: DEFAULT_SIZE_FACTORS },
-      "NVDA-BTC": { spreads: DEFAULT_SPREADS, sizeFactors: DEFAULT_SIZE_FACTORS },
-      "TSLA-BTC": { spreads: DEFAULT_SPREADS, sizeFactors: DEFAULT_SIZE_FACTORS }
+      "BTC-USD": { spreads: DEFAULT_SPREADS, sizeFactors: DEFAULT_SIZE_FACTORS },
+      "ETH-USD": { spreads: DEFAULT_SPREADS, sizeFactors: DEFAULT_SIZE_FACTORS },
     }
   }));
 

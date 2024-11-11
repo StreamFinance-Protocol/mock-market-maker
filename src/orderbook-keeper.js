@@ -22,9 +22,8 @@ class OrderbookKeeper {
     this.lowestAskPrice = {}; // map from market to lowest ask price
     this.highestBidPrice = {};
     this.markets = options.markets ?? [
-      "AAPL-BTC",
-      "NVDA-BTC",
-      "TSLA-BTC"
+      "BTC-USD",
+      "ETH-USD",
     ];
   }
 

@@ -33,7 +33,7 @@ class MarketTrader {
     this.baseOrderSize = options.baseOrderSize || 20;
     this.sizeVariation = options.sizeVariation || 0.40; // 40% variation by default
     this.goodTilBlockBuffer = options.goodTilBlockBuffer || 15;
-    this.markets = options.markets || ["AAPL-BTC", "NVDA-BTC", "TSLA-BTC"];
+    this.markets = options.markets || ["BTC-USD", "ETH-USD"];
   }
 
   async initialize() {

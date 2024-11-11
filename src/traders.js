@@ -515,7 +515,7 @@ const whales = [
 // Constants for placing orders
 const DEFAULT_GOOD_TIL_BLOCK_BLOCK_BUFFER = 16;
 const EQUAL_LIKELIHOOD_NUM = 50;
-const ALL_MARKETS_LIST = ["AAPL-BTC", "NVDA-BTC", "TSLA-BTC"]
+const ALL_MARKETS_LIST = ["BTC-USD", "ETH-USD"]
 
 function getRandomWaitTimeWhales() {
   const minWaitTime = 10000; // 10 seconds in milliseconds
